@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>login authentication </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        <div class="form-box">
+            <div id="login">
+                <form name="loginform" method="post" onsubmit="checkuser(event)">
+                    <label class="labels">Username</label>
+                    <input type="text" class="input-field" id="loginusername" name="username" placeholder="Username" required>
+                    <label class="labels">password</label>
+                    <input type="password " class="input-field" id="loginpassword" name="password" placeholder="Enter Password" required>
+                    <span id="login-error-message"></span>
+
+                    <button type="submit" class="submit-button">Log in</button>
+                    <br>
+                    <label class="labels">don't have an account</label>
+                </form>
+                <button id="register-button" onclick="openregister()">register</button>
+
+            </div>
+            <div id="register">
+                <form name="registerform" action="" onsubmit="validateuser(event)">
+                    <label class="labels">Username</label>
+                    <input type="text" class="input-field" id="registerusername" placeholder="Username" name="registerusername" required>  
+                    <label class="labels">password</label>
+                    <input type="password" class="input-field" id="registerpassword" name="registerpassword" placeholder="Enter Password" required>
+                    <input type="password" class="input-field" id="registerconfirmpassword" name="confirm-password" placeholder="confirm Password" required>
+                    <span id="register-error-message"></span>
+                    <button type="submit" class="submit-button">Register</button>
+                    <br>
+                    <label class="labels">already have an account</label>
+                </form>
+                <button id="signin-button" onclick="opensignin()">sign in</button>
+
+            </div>
+
+        </div>
+        
+    </div>
+    
+</body>
+<script src="script.js"></script>
+</html>
